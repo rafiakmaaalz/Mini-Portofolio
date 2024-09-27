@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mini Portofolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+</head>
+<body>
+    <header class="container-header">
+        <div class="header-left">
+            <img class="logo" src="assets/coding-removebg-preview.png" alt="Logo">
+        </div>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#profil">Our Profile</a>
+            <a href="#porto">Portfolio</a>
+            <a href="#message">Message Us</a>
+        </nav>
+    </header>
+
+    <main>
+       <!-- HOME Section -->
+       <section id="home">
+            <header class="text-pembuka">
+                <h1>Hi <span id="user">User</span>, Welcome To My Website</h1>
+            </header>
+            <article class="home-article">
+                <p>Ini adalah website untuk mini portofolio yang saya buat</p>
+                <p>Terima kasih dan semoga bermanfaat</p>
+            </article>
+            <!-- Slideshow with navigation dots -->
+            <div class="banner">
+                <div class="slideshow-container">
+                    <div class="mySlides fade">
+                        <img src="assets/gunung1.jpg" alt="Gambar 1">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="assets/gunung2.jpg" alt="Gambar 2">
+                    </div>
+                    <div class="mySlides fade">
+                        <img src="assets/gunung3.jpg" alt="Gambar 3">
+                    </div>
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <!-- Dots -->
+                <div class="dot-container">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </section>
+    
+        
+
+        <section id="profil" class="container">
+            <header class="text-pembuka">
+                <h1>Our Profile</h1>
+                <p>Meet Our Expert</p>
+            </header>
+            <div class="profile-container">
+                <div class="profile-card">
+                    <div class="profile-image-container">
+                        <img src="assets/gojo.jpeg" alt="John Doe" class="profile-image">
+                    </div>
+                    <h3>Rafi Akmal Maulana</h3>
+                    <p class="role">Data Science</p>
+                    <p class="description">
+                        Hai namaku Rafi Akmal Maulana, aku seorang lulusan mahasiswa UKSW jurusan Teknik Informatika yang memiliki keahlian tentang Data Science, Data Analyst, dan Juga Front-End Web Developer, Saya juga tertarik untuk mempelajari hal dan teknologi yang baru untuk menambah wawasan saya.
+                    </p>
+                    <div class="social-icons">
+                        <a href="https://www.linkedin.com/in/rafiakmalmaulana/"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/rafiakmaaalz"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="porto" class="container">
+            <header class="text-pembuka">
+                <h1>Portfolio</h1>
+            </header>
+            <div class="portfolio-items">
+                <div class="portfolio-item">
+                    <img src="assets/gunung4.jpeg" alt="Gunung Andong">
+                    <h3>Gunung Andong</h3>
+                    <p>This project showcases our ability to develop engaging web applications.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="assets/gunung5.jpeg" alt="Gunung Merbabu">
+                    <h3>Gunung Merbabu</h3>
+                    <p>An innovative mobile app that assists users in various activities.</p>
+                </div>
+                <div class="portfolio-item">
+                    <img src="assets/gunung6.jpeg" alt="Gunung Prau">
+                    <h3>Gunung Prau</h3>
+                    <p>A tailored solution designed to meet our client's specific needs.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="message" class="container">
+            <header class="text-pembuka">
+                <h1>Message Us</h1>
+            </header>
+            <div class="message">
+                <div class="form">
+                    <form id="contactForm" onsubmit="return result(event);">
+                        <div class="form-label">
+                            <label for="nama">Name</label>
+                            <input type="text" name="name" id="nama" placeholder="Your Name" class="input-form" />
+                        </div>
+                        <div class="form-label">
+                            <label for="tanggal-lahir">Date of Birth</label>
+                            <input type="date" name="tanggal-lahir" id="tanggal-lahir" class="input-form" />
+                        </div>
+                        <div class="form-label">
+                            <label for="jenis-kelamin">Gender</label>
+                            <div class="gender-options">
+                                <input type="radio" id="male" name="gender" value="Male" />
+                                <label for="male">Male</label>
+                                <input type="radio" id="female" name="gender" value="Female" />
+                                <label for="female">Female</label>
+                            </div>
+                        </div>
+                        <div class="form-label">
+                            <label for="pesan">Message</label>
+                            <textarea name="pesan" id="pesan" cols="30" rows="5" class="input-form" placeholder="Write your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn">Submit</button>
+                    </form>
+                </div>
+                <div class="answer">
+                    <div class="box">
+                        <h2>Response</h2>
+                        <div class="answer-flex">
+                            <p><strong>Current Time:</strong></p>
+                            <span id="time"></span>
+                        </div>
+                        <div class="answer-flex">
+                            <p><strong>Name:</strong></p>
+                            <span id="result-nama"></span>
+                        </div>
+                        <div class="answer-flex">
+                            <p><strong>Date of Birth:</strong></p>
+                            <span id="result-tgl-lhr"></span>
+                        </div>
+                        <div class="answer-flex">
+                            <p><strong>Gender:</strong></p>
+                            <span id="result-gender"></span>
+                        </div>
+                        <div class="answer-flex">
+                            <p><strong>Message:</strong></p>
+                            <span id="result-pesan"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Rafi Akmal Maulana</p>
+            <p>Learn to code, learn to be creative.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
