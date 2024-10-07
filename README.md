@@ -1,4 +1,4 @@
-# Mini Portofolio
+# RevoU Course Portofolio
 Mini portofolio task from Revou Mini Course using html,css, and javascript
 
 here the result
